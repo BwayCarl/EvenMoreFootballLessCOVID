@@ -5,7 +5,7 @@ INSERT INTO NFLTeams (team, city, county, fips) VALUES ('Arizona Cardinals', 'Gl
 INSERT INTO NFLTeams (team, city, county, fips) VALUES ('Baltimore Ravens', 'Baltimore MD', 'Baltimore', 24005);
 INSERT INTO NFLTeams (team, city, county, fips) VALUES ('Buffalo Bills', 'Orchard Park NY', 'Erie', 36029);
 INSERT INTO NFLTeams (team, city, county, fips) VALUES ('Carolina Panthers', 'Charlotte NC', 'Mecklenburg', 37119);
-INSERT INTO NFLTeams (team, city, county, fips) VALUES ('Chigago Bears', 'Chicago IL', 'Cook', 17031);
+INSERT INTO NFLTeams (team, city, county, fips) VALUES ('Chicago Bears', 'Chicago IL', 'Cook', 17031);
 INSERT INTO NFLTeams (team, city, county, fips) VALUES ('Cincinnati Bengals', 'Cincinnati OH', 'Hamilton', 39061);
 INSERT INTO NFLTeams (team, city, county, fips) VALUES ('Cleveland Browns', 'Cleveland OH', 'Cuyahoga', 39035);
 INSERT INTO NFLTeams (team, city, county, fips) VALUES ('Dallas Cowboys', 'Arlington TX', 'Tarrant', 48439);
@@ -22,11 +22,11 @@ INSERT INTO NFLTeams (team, city, county, fips) VALUES ('Miami Dolphins', 'Miami
 INSERT INTO NFLTeams (team, city, county, fips) VALUES ('Minnesota Vikings', 'Minneapolis, MN', 'Hennepin', 27053);
 INSERT INTO NFLTeams (team, city, county, fips) VALUES ('New England Patriots', 'Foxborough MA', 'Norfolk', 25021);
 INSERT INTO NFLTeams (team, city, county, fips) VALUES ('New Orleans Saints', 'New Orleans LA', 'Orleans', 22071);
-INSERT INTO NFLTeams (team, city, county, fips) VALUES ('New York Giants', 'East Ruthorford NJ', 'Bergen',34003);
-INSERT INTO NFLTeams (team, city, county, fips) VALUES ('New York Jets', 'East Ruthorford NJ', 'Bergen', 34003);
-INSERT INTO NFLTeams (team, city, county, fips) VALUES ('Phladelphia Eagles', 'Philadelphia PA', 'Philadelphia', 42101);
+INSERT INTO NFLTeams (team, city, county, fips) VALUES ('New York Giants', 'East Rutherford NJ', 'Bergen',34003);
+INSERT INTO NFLTeams (team, city, county, fips) VALUES ('New York Jets', 'East Rutherford NJ', 'Bergen', 34003);
+INSERT INTO NFLTeams (team, city, county, fips) VALUES ('Philadelphia Eagles', 'Philadelphia PA', 'Philadelphia', 42101);
 INSERT INTO NFLTeams (team, city, county, fips) VALUES ('Pittsburgh Steelers', 'Pittsburgh PA', 'Allegheny',42003);
 INSERT INTO NFLTeams (team, city, county, fips) VALUES ('San Francisco 49ers', 'Santa Clara CA', 'Santa Clara', 6085);
-INSERT INTO NFLTeams (team, city, county, fips) VALUES ('Seattle Seahawks', 'Seattle_WA', 'King', 53033);
+INSERT INTO NFLTeams (team, city, county, fips) VALUES ('Seattle Seahawks', 'Seattle WA', 'King', 53033);
 INSERT INTO NFLTeams (team, city, county, fips) VALUES ('Tampa Bay Buccaneers', 'Tampa FL', 'Hillsborough', 12057);
-INSERT INTO NFLTeams (team, city, county, fips) VALUES ('Washington Football Team', 'Landover MD', 'Prince Georges', 24033);
+INSERT INTO NFLTeams (team, city, county, fips) VALUES ('Washington Football Team', 'Landover MD', 'Prince George''s', 24033);
