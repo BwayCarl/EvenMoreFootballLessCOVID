@@ -1,0 +1,125 @@
+<body class="page-wrapper">
+    <!-- background photo by Gravitylicious.com from Pexels -->
+
+    <!-- header text -->
+    <header class="blackbg mb-3">
+        <h1 class="text-uppercase">More Football Less COVID</h1>
+    </header>
+
+    <main class="container">
+
+        <!-- provides intro to the app -->
+        <div class="hero section-bg">
+            <div class="intro-text">
+                <h3 class="mb-4">Know the COVID risk before you buy your tickets!</h3>
+                <p class="mb-3 font-weight-bold">Get to the game in three easy steps:</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-user-friends fa-3x"></i>
+                            <p class="card-text mt-2">Select your team</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="far fa-list-alt fa-3x"></i>
+                            <p class="card-text mt-2">Choose your game</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-briefcase-medical fa-3x"></i>
+                            <p class="card-text mt-2">Evaluate your risk</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Code for the dropdown menu -->
+        <div class="dropdown text-center">
+            <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select your team
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <h5 class="dropdown-item font-weight-bold mb-0">NFC Teams:</h5>
+                <a id="ARI" class="dropdown-item" href='#' value="WIN">Arizona Cardinals</a>
+                <a id="ATL" class="dropdown-item" href='#'>Atlanta Falcons</a>
+                <a id="CAR" class="dropdown-item" href='#'>Carolina Panthers</a>
+                <a id="CHI" class="dropdown-item" href='#'>Chicago Bears</a>
+                <a id="DAL" class="dropdown-item" href='#'>Dallas Cowboys</a>
+                <a id="DET" class="dropdown-item" href='#'>Detroit Lions</a>
+                <a id="GB" class="dropdown-item" href='#'>Green Bay Packers</a>
+                <a id="LAR" class="dropdown-item" href='#'>Los Angeles Rams</a>
+                <a id="MIN" class="dropdown-item" href='#'>Minnesota Vikings</a>
+                <a id="NO" class="dropdown-item" href='#'>New Orleans Saints</a>
+                <a id="NYG" class="dropdown-item" href='#'>New York Giants</a>
+                <a id="PHI" class="dropdown-item" href='#'>Philadelphia Eagles</a>
+                <a id="SF" class="dropdown-item" href='#'>San Francisco 49ers</a>
+                <a id="SEA" class="dropdown-item" href='#'>Seattle Seahawks</a>
+                <a id="TB" class="dropdown-item" href='#'>Tampa Bay Buccaneers</a>
+                <a id="WAS" class="dropdown-item" href='#'>Washington Football Team</a>
+                <h5 class="dropdown-item font-weight-bold mt-2 mb-0">AFC Teams:</h5>
+                <a id="BAL" class="dropdown-item" href='#'>Baltimore Ravens</a>
+                <a id="BUF" class="dropdown-item" href='#'>Buffalo Bills</a>
+                <a id="CIN" class="dropdown-item" href='#'>Cincinnati Bengals</a>
+                <a id="CLE" class="dropdown-item" href='#'>Cleveland Browns</a>
+                <a id="DEN" class="dropdown-item" href='#'>Denver Broncos</a>
+                <a id="HOU" class="dropdown-item" href='#'>Houston Texans</a>
+                <a id="IND" class="dropdown-item" href='#'>Indianapolis Colts</a>
+                <a id="JAX" class="dropdown-item" href='#'>Jacksonville Jaguars</a>
+                <a id="KC" class="dropdown-item" href='#'>Kansas City Chiefs</a>
+                <a id="LV" class="dropdown-item" href='#'>Las Vegas Raiders</a>
+                <a id="LAC" class="dropdown-item" href='#'>Los Angeles Chargers</a>
+                <a id="MIA" class="dropdown-item" href='#'>Miami Dolphins</a>
+                <a id="NE" class="dropdown-item" href='#'>New England Patriots</a>
+                <a id="NYJ" class="dropdown-item" href='#'>New York Jets</a>
+                <a id="PIT" class="dropdown-item" href='#'>Pittsburgh Steelers</a>
+                <a id="TEN" class="dropdown-item" href='#'>Tennessee Titans</a>
+            </div>
+        </div>
+
+        <!--schedule renders here; starts hidden, shows onclick and expands to fit content -->
+        <div id="scheduleArea" class="schedule section-bg d-none">
+            <h2 id="teamName" class="mb-5"></h2>
+            <ul id="teamGame" class="teamGame">
+        </div>
+
+        <!-- covid risk data renders here -->
+        <div id="risk-info" class="section-bg d-none">
+            <h2 id="stadium" class="text-center"></h2>
+            <h5 id="city" class="text-center mb-4"></h5>
+            <div class="row">
+                <p class="riskbox font-weight-bold col-md-6">Number of Cases: <span class="riskdata" id="cases"></span>
+                </p>
+                <p class="riskbox font-weight-bold col-md-6">State Risk Level: <span class="riskdata"
+                        id="cityRisk"></span></p>
+                <p class="riskbox font-weight-bold col-md-6">Adjusted Capacity: <span class="riskdata"
+                        id="availableSeats"></span></p>
+                <p class="riskbox font-weight-bold col-md-6">Empty Seats Between: <span class="riskdata"
+                        id="btwnSeats"></span>
+                </p>
+            </div>
+        </div>
+
+        <div id="map"></div>
+
+    </main>
+
+
+
+
+    <footer class="footer mt-5">
+        <p class="blackbg mb-0">Brought to you by: Adam, Charles, Jake, and Manuel </p>
+    </footer>
+</body>
+
+</html>
