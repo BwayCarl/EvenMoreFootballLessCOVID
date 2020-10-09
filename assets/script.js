@@ -7,6 +7,8 @@ $(document).ready(function () {
 
     //event listener for the drop-down menu
     $(".dropdown-menu a").click(function (event) {
+        console.log("cliked!!")
+        console.log($(this).attr("id"))
         event.preventDefault();
         //grab the team name based on user selection
         selectedTeam = $(this).attr("id");
