@@ -1,7 +1,8 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
-const db = require("./models")
-const passport = require("./config/passport");
+const db = require("./models/user");
+
+const axios = require('axios');
 
 
 
@@ -30,3 +31,22 @@ db.sequelize.sync({ force: true }).then(function() {
     console.log("App listening on PORT " + PORT);
   });
 });
+
+// Team news api call
+app.get('/teaminfo', function(req, res){
+  axios.get('/userID=12345')
+  .then(function(response){
+    // handle sucess
+    res.json(response);
+    console.log(response);
+  }
+  )
+  .catch(function (error){
+    // handle error
+    console.log(error)
+  })
+})
+
+// League news API Call
+
+// Game Vegas money line api call
