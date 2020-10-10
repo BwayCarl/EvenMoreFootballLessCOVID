@@ -7,6 +7,7 @@ var axios = require("axios")
 var config = require("config.js")
 const db = require("./models/user");
 
+// C:\Users\Manuel\EvenMoreFootballLessCOVID\config.js
 // Create an instance of the express app.
 var app = express();
 
