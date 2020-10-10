@@ -5,6 +5,7 @@ var exphbs = require("express-handlebars");
 var path = require("path");
 var axios = require("axios")
 var config = require("config.js")
+const db = require("./models/user");
 
 // Create an instance of the express app.
 var app = express();
@@ -33,13 +34,6 @@ app.get("/", function (req, res) {
 //   res.render("index", ...[1]);
 // });
 
-const express = require("express");
-const exphbs = require("express-handlebars");
-const db = require("./models/user");
-
-const axios = require('axios');
-
-
 
 var PORT = process.env.PORT || 8080;
 var app = express();
@@ -65,10 +59,6 @@ app.get("/teaminfo", function(req, res){
     // handle error
     console.log(error);
   })
-  
-
-
-
 })
 
 // app.get("/", function (req, res) {
