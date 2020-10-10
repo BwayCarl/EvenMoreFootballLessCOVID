@@ -1,0 +1,32 @@
+--  NFL Teams Table input with FIPS column to match API FIPS location to county of home field.
+
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (1, 'Falcons', 'Altanta', 'GA', 'Fulton', 13121);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (2, 'Cardinals', 'Glendale', 'AZ', 'Maricopa', 4013);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (3, 'Ravens', 'Baltimore', 'MD', 'Baltimore', 24005);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (4, 'Bills', 'Orchard Park', 'NY', 'Erie', 36029);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (5, 'Panthers', 'Charlotte', 'NC', 'Mecklenburg', 37119);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (6, 'Bears', 'Chicago', 'IL', 'Cook', 17031);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (7, 'Bengals', 'Cincinnati', 'OH', 'Hamilton', 39061);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (8, 'Browns', 'Cleveland', 'OH', 'Cuyahoga', 39035);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (9, 'Cowboys', 'Arlington', 'TX', 'Tarrant', 48439);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (10, 'Broncos', 'Denver', 'CO', 'Denver', 8031);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (11, 'Lions', 'Detroit', 'MI', 'Wayne', 26163);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (12, 'Packers', 'Green Bay', 'WI', 'Brown', 55009);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (13, 'Texans', 'Houston', 'TX', 'Harris', 48201);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (14, 'Colts', 'Indianapolis',  'IN', 'Marion', 18097);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (15, 'Jaguars', 'Jacksonville', 'FL', 'Duval', 12031);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (16, 'Chiefs', 'Kansas City', 'MO', 'Jackson', 29095);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (17, 'Raiders', 'Paradise', 'NV', 'Clark', 32003);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (18, 'Chargers', 'Ingelwood', 'CA', 'Los Angeles', 6037);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (19, 'Dolphins', 'Miami Gardens', 'FL', 'Miami-Dade', 12086);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (20, 'Vikings', 'Minneapolis', 'MN', 'Hennepin', 27053);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (21, 'Patriots', 'Foxborough', 'MA', 'Norfolk', 25021);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (22, 'Saints', 'New Orleans', 'LA', 'Orleans', 22071);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (23, 'Giants', 'East Rutherford', 'NJ', 'Bergen',34003);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (24, 'Jets', 'East Rutherford', 'NJ', 'Bergen', 34003);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (25, 'Eagles', 'Philadelphia','PA', 'Philadelphia', 42101);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (26, 'Steelers', 'Pittsburgh', 'PA', 'Allegheny',42003);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (27, '49ers', 'Santa Clara', 'CA', 'Santa Clara', 6085);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (28, 'Seahawks', 'Seattle','WA', 'King', 53033);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (29, 'Buccaneers', 'Tampa', 'FL', 'Hillsborough', 12057);
+INSERT INTO team (id, teamName, city, state, county, fips) VALUES (30, 'Football Team', 'Landover', 'MD', 'Prince George''s', 24033);
