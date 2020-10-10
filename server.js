@@ -6,6 +6,7 @@ var path = require("path");
 var axios = require("axios")
 var config = require("./config.js")
 
+// C:\Users\Manuel\EvenMoreFootballLessCOVID\config.js
 // Create an instance of the express app.
 var app = express();
 

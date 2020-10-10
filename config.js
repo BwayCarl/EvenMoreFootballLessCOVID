@@ -1,8 +1,9 @@
 require('dotenv').config()
 
+
 const config = {
-    apikey1 = process.env[apikey1],
-    apikey2 = process.env[apikey2]
+    apiKey1 : process.env[apiKey1],
+    apiKey2 : process.env[apiKey2]
 }
 
 module.exports = config
