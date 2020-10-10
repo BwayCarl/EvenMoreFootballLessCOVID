@@ -14,7 +14,9 @@ CREATE TABLE user (
 CREATE TABLE team (
 	id INT NOT NULL,
     teamName VARCHAR (50),
-    city VARCHAR (50)    
+    city VARCHAR (50),
+    state VARCHAR (5),
+    fips INT
 );
 
 CREATE TABLE game (
