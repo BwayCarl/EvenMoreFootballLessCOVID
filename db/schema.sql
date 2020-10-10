@@ -16,6 +16,7 @@ CREATE TABLE team (
     teamName VARCHAR (50),
     city VARCHAR (50),
     state VARCHAR (5),
+    county VARCHAR (50),
     fips INT
 );
 
