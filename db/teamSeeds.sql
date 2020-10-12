@@ -1,34 +1,35 @@
 --  NFL Teams Table input with FIPS column to match API FIPS location to county of home field.
 
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Falcons', 'Altanta', 'GA', 'Fulton', 13121);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Cardinals', 'Glendale', 'AZ', 'Maricopa', 4013);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Ravens', 'Baltimore', 'MD', 'Baltimore', 24005);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Bills', 'Orchard Park', 'NY', 'Erie', 36029);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Panthers', 'Charlotte', 'NC', 'Mecklenburg', 37119);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Bears', 'Chicago', 'IL', 'Cook', 17031);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Bengals', 'Cincinnati', 'OH', 'Hamilton', 39061);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Browns', 'Cleveland', 'OH', 'Cuyahoga', 39035);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Cowboys', 'Arlington', 'TX', 'Tarrant', 48439);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Broncos', 'Denver', 'CO', 'Denver', 8031);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Lions', 'Detroit', 'MI', 'Wayne', 26163);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Packers', 'Green Bay', 'WI', 'Brown', 55009);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Texans', 'Houston', 'TX', 'Harris', 48201);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Colts', 'Indianapolis',  'IN', 'Marion', 18097);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Jaguars', 'Jacksonville', 'FL', 'Duval', 12031);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Chiefs', 'Kansas City', 'MO', 'Jackson', 29095);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Raiders', 'Paradise', 'NV', 'Clark', 32003);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Chargers', 'Ingelwood', 'CA', 'Los Angeles', 6037);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Rams', 'Ingelwood', 'CA', 'Los Angeles', 6037);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Dolphins', 'Miami Gardens', 'FL', 'Miami-Dade', 12086);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Vikings', 'Minneapolis', 'MN', 'Hennepin', 27053);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Patriots', 'Foxborough', 'MA', 'Norfolk', 25021);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Saints', 'New Orleans', 'LA', 'Orleans', 22071);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Giants', 'East Rutherford', 'NJ', 'Bergen',34003);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Jets', 'East Rutherford', 'NJ', 'Bergen', 34003);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Eagles', 'Philadelphia','PA', 'Philadelphia', 42101);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Steelers', 'Pittsburgh', 'PA', 'Allegheny',42003);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('49ers', 'Santa Clara', 'CA', 'Santa Clara', 6085);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Seahawks', 'Seattle','WA', 'King', 53033);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Buccaneers', 'Tampa', 'FL', 'Hillsborough', 12057);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Titans', 'Nashville', 'TN', 'Davidson', 47037);
-INSERT INTO teams (teamName, city, state, county, fips) VALUES ('Football Team', 'Landover', 'MD', 'Prince George''s', 24033);
+INSERT INTO teams (teamName, city, state, county, fips) VALUES 
+('Falcons', 'Altanta', 'GA', 'Fulton', 13121),
+('Cardinals', 'Glendale', 'AZ', 'Maricopa', 4013),
+('Ravens', 'Baltimore', 'MD', 'Baltimore', 24005),
+('Bills', 'Orchard Park', 'NY', 'Erie', 36029),
+('Panthers', 'Charlotte', 'NC', 'Mecklenburg', 37119),
+('Bears', 'Chicago', 'IL', 'Cook', 17031),
+('Bengals', 'Cincinnati', 'OH', 'Hamilton', 39061),
+('Browns', 'Cleveland', 'OH', 'Cuyahoga', 39035),
+('Cowboys', 'Arlington', 'TX', 'Tarrant', 48439),
+('Broncos', 'Denver', 'CO', 'Denver', 8031),
+('Lions', 'Detroit', 'MI', 'Wayne', 26163),
+('Packers', 'Green Bay', 'WI', 'Brown', 55009),
+('Texans', 'Houston', 'TX', 'Harris', 48201),
+('Colts', 'Indianapolis',  'IN', 'Marion', 18097),
+('Jaguars', 'Jacksonville', 'FL', 'Duval', 12031),
+('Chiefs', 'Kansas City', 'MO', 'Jackson', 29095),
+('Raiders', 'Paradise', 'NV', 'Clark', 32003),
+('Chargers', 'Ingelwood', 'CA', 'Los Angeles', 6037),
+('Rams', 'Ingelwood', 'CA', 'Los Angeles', 6037),
+('Dolphins', 'Miami Gardens', 'FL', 'Miami-Dade', 12086),
+('Vikings', 'Minneapolis', 'MN', 'Hennepin', 27053),
+('Patriots', 'Foxborough', 'MA', 'Norfolk', 25021),
+('Saints', 'New Orleans', 'LA', 'Orleans', 22071),
+('Giants', 'East Rutherford', 'NJ', 'Bergen',34003),
+('Jets', 'East Rutherford', 'NJ', 'Bergen', 34003),
+('Eagles', 'Philadelphia','PA', 'Philadelphia', 42101),
+('Steelers', 'Pittsburgh', 'PA', 'Allegheny',42003),
+('49ers', 'Santa Clara', 'CA', 'Santa Clara', 6085),
+('Seahawks', 'Seattle','WA', 'King', 53033),
+('Buccaneers', 'Tampa', 'FL', 'Hillsborough', 12057),
+('Titans', 'Nashville', 'TN', 'Davidson', 47037),
+('Football Team', 'Landover', 'MD', 'Prince George''s', 24033);

@@ -1,10 +1,15 @@
--- Create EMFLC Schema
+-- CREATE EMFLC SCHEMA --
+
+-- Drop existing database
 DROP DATABASE IF EXISTS emflcDB;
 
+-- Create database
 CREATE DATABASE emflcDB;
 
+-- Use datatbase created
 USE emflcDB;
 
+-- User Table for Authentication
 CREATE TABLE user (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR (100),
@@ -12,6 +17,7 @@ CREATE TABLE user (
     faveTeam VARCHAR (50)
 );
 
+-- Team table for NFL teams and their locations
 CREATE TABLE team (
 	id INT NOT NULL AUTO_INCREMENT,
     teamName VARCHAR (50),
@@ -22,13 +28,18 @@ CREATE TABLE team (
     PRIMARY KEY (id)
 );
 
+-- Table for schedule of games; need more API info on this
+-- to properly insert correct info?
 CREATE TABLE game (
 	game_id INT,
     team_id INT,
 	date DATE
 );
 
+-- Table for latest news on teams and Covid news in the area
 CREATE TABLE news (
-	text VARCHAR(255),
-    team_id INT
+	id INT NOT NULL AUTO_INCREMENT,
+	text VARCHAR(255), -- Is this field used for news text/headline/link?
+    team INT NOT NULL REFERENCES team(id),
+    PRIMARY KEY (id)
 );
