@@ -36,10 +36,10 @@ CREATE TABLE game (
 	date DATE
 );
 
--- Table for latest news on teams and Covid news in the area
+-- Table for latest news on teams and Covid news in the area.
 CREATE TABLE news (
 	id INT NOT NULL AUTO_INCREMENT,
-	text VARCHAR(255), -- Is this field used for news text/headline/link?
+	pinnedNews VARCHAR(255), -- Field used for news headlines/links.
     team INT NOT NULL REFERENCES team(id),
     PRIMARY KEY (id)
 );
