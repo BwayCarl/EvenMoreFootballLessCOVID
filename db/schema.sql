@@ -1,4 +1,5 @@
 -- Create EMFLC Schema
+DROP DATABASE IF EXISTS emflcDB;
 
 CREATE DATABASE emflcDB;
 
@@ -12,12 +13,13 @@ CREATE TABLE user (
 );
 
 CREATE TABLE team (
-	id INT NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT,
     teamName VARCHAR (50),
     city VARCHAR (50),
     state VARCHAR (5),
-    county VARCHAR (50),
-    fips INT
+    county VARCHAR(50),
+    fips INT,
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE game (
