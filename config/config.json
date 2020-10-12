@@ -1,6 +1,7 @@
 {
     "development": {
       "username": "root",
+      "**--COMMENT--**": "ENTER YOUR MySQL PASSWORD BELOW.",
       "password": "",
       "database": "emflcDB",
       "host": "127.0.0.1",
