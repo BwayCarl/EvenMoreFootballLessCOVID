@@ -1,6 +1,6 @@
 --  NFL Teams Table input with FIPS column to match API FIPS location to county of home field.
 
-INSERT INTO teams (teamName, city, state, county, fips) VALUES 
+INSERT INTO team (teamName, city, state, county, fips) VALUES 
 ('Falcons', 'Altanta', 'GA', 'Fulton', 13121),
 ('Cardinals', 'Glendale', 'AZ', 'Maricopa', 4013),
 ('Ravens', 'Baltimore', 'MD', 'Baltimore', 24005),
