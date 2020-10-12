@@ -4,8 +4,8 @@ var connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "password", //Insert your MySQL password here.
-  database: "covidCounties"
+  password: "", //Insert your MySQL password here.
+  database: "emflcDB"
 });
 
 connection.connect(function (err) {
