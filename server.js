@@ -4,10 +4,9 @@ var exphbs = require("express-handlebars");
 var path = require("path");
 var axios = require("axios")
 // var config = require("config.js")
-const db = require("./models/user");
+var db = require("./models");
 //session and passport are required for authentication
 var session = require("express-session");
-var passport = require("passport");
 // Requiring passport as we've configured it
 var passport = require("./config/passport");
 
@@ -71,9 +70,8 @@ app.get("/teaminfo", function (req, res) {
   
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync().then(function () {
-  app.listen(PORT, function () {
-    // Log (server-side) when our server has started
-    console.log("Server listening on: http://localhost:" + PORT);
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
   });
 });
