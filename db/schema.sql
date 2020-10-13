@@ -1,33 +1,45 @@
--- Create Covid Schema
-CREATE DATABASE covid;
+-- CREATE EMFLC SCHEMA --
 
-USE covid;
+-- Drop existing database
+DROP DATABASE IF EXISTS emflcDB;
 
--- Create Tables
+-- Create database
+CREATE DATABASE emflcDB;
 
--- Definition of 'fips': Federal Information Processing Standards - American National Standards Institute codes (ANSI codes)
--- are standardized numeric or alphabetic codes issued by the American National Standards Institute (ANSI) 
--- to ensure uniform identification of geographic entities through all federal government agencies.
--- (https://www.census.gov/quickfacts/fact/note/US/fips)
+-- Use datatbase created
+USE emflcDB;
 
-CREATE TABLE covidCounties 
-(
-    id INT NOT NULL AUTO_INCREMENT, 
-    DATETIME,
+-- User Table for Authentication
+CREATE TABLE user (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR (100),
+    pword VARCHAR (128),
+    faveTeam VARCHAR (50)
+);
+
+-- Team table for NFL teams and their locations
+CREATE TABLE team (
+	id INT NOT NULL AUTO_INCREMENT,
+    teamName VARCHAR (50),
+    city VARCHAR (50),
+    state VARCHAR (5),
     county VARCHAR(50),
-    state VARCHAR (20),
-    fips INT(11), 
-    cases INT (11),
-    deaths INT (11),
+    fips INT,
     PRIMARY KEY (id)
 );
 
-
-CREATE TABLE NFLTeams (
-id INT (11)NOT NULL AUTO_INCREMENT,
-team VARCHAR (50),
-city VARCHAR (50),
-county VARCHAR (50),
-fips INT (11)
+-- Table for schedule of games; need more API info on this
+-- to properly insert correct info?
+CREATE TABLE game (
+	game_id INT,
+    team_id INT,
+	date DATE
 );
 
+-- Table for latest news on teams and Covid news in the area.
+CREATE TABLE news (
+	id INT NOT NULL AUTO_INCREMENT,
+	pinnedNews VARCHAR(255), -- Field used for news headlines/links.
+    team INT NOT NULL REFERENCES team(id),
+    PRIMARY KEY (id)
+);
