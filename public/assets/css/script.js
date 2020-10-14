@@ -10,6 +10,10 @@ $(document).ready(function () {
         event.preventDefault();
         //grab the team name based on user selection
         selectedTeam = $(this).attr("id");
+        // other api functions that need to be called
+        // teamNews(selectedTeam);
+        // leagueNews();
+        // fantasyPlayers(team);
 
         var queryURL = "https://api.sportsdata.io/v3/nfl/scores/json/Schedules/2020?key=6306de6ffce1432bae3dc370a38a8de3"
 
@@ -148,6 +152,90 @@ $(document).ready(function () {
         }); //closes Shedules API call
 
     }); //closes event listener on teams in dropdown
+
+    // this is the league news api call that I will export to the main javascript and call from there
+function leagueNews() {
+    // variable to make a new XMLHttpRequest
+    var xhttp = new XMLHttpRequest();
+    // this is the function that is to happen after the api is called
+    xhttp.onreadystatechange = function () {
+        // this is a simple check that the JSON response isn't and erro
+        if (this.readyState === 4 && this.status == 200) {
+            // this is the object that I need parsed and don't want to type it out every time I need the JSON response text
+            const res = (JSON.parse(xhttp.responseText));
+            console.log(res);
+            for (i=0; i<3; i++){
+                // these are the elements of the article that I will need for the handlebars html
+                const leagueNewsTitle = res[i].Title;
+                const leagueNewsContent = res[i].Title;
+                const leagueNewsTimeago = res[i].TimeAgo;
+                // this is the league news div that the json resonse is to be rendered into.
+                $("#leagueNewsDiv")
+                    .append($('<div>')
+                        .html("<h2>"+leagueNewsTitle+"</h2>\n <p>"+leagueNewsContent+"</p>\n <p>"+leagueNewsTimeago+"</p>")
+                        .addClass('carousel-item section-bg')
+                    );
+            }
+        }
+    };
+    xhttp.open('GET', 'https://api.sportsdata.io/v3/nfl/scores/json/News?key=f7876577a76b4ae49e69a47f4dcdcdff', true);
+    xhttp.send();
+}
+// this is the league news api call that I will export to the main javascript and call from there
+ function teamNews(team) {
+    // variable to make a new XMLHttpRequest
+    var xhttp = new XMLHttpRequest();
+    // this is the function that is to happen after the api is called
+    xhttp.onreadystatechange = function () {
+        // this is a simple check that the JSON response isn't and erro
+        if (this.readyState === 4 && this.status == 200) {
+            // this is the object that I need parsed and don't want to type it out every time I need the JSON response text
+            const res = (JSON.parse(xhttp.responseText));
+            const teamNewsTitle = res[0].Title;
+            const teamNewsContent = res[0].Content;
+            const teamNewsTimeAgo = res[0].TimeAgo;
+                $("#teamNewsDiv")
+                    .append($("<div>")
+                        .html("\n<h2 class='newsTitle'>"+teamNewsTitle+"</h2>\n <p>"+teamNewsContent+"</p>\n <p>"+teamNewsTimeAgo+"</p>")
+                    )
+                    .addClass('section-bg')
+            }
+    };
+    xhttp.open('GET', "https://api.sportsdata.io/v3/nfl/scores/json/NewsByTeam/"+team+"?key=f7876577a76b4ae49e69a47f4dcdcdff", true);
+    xhttp.send();
+}
+// this is the league news api call that I will export to the main javascript and call from there
+function fantasyPlayers(team) {
+    // variable to make a new XMLHttpRequest
+    var xhttp = new XMLHttpRequest();
+    // this is the function that is to happen after the api is called
+    xhttp.onreadystatechange = function () {
+        // this is a simple check that the JSON response isn't and erro
+        if (this.readyState === 4 && this.status == 200) {
+            // this is the object that I need parsed and don't want to type it out every time I need the JSON response text
+            const res = (JSON.parse(xhttp.responseText));
+            //just the games where the selected team is home
+            console.log(res)
+            let favTeamPlayers = res.filter(favTeamPlayers => (favTeamPlayers.Team === team ));
+            // team players array
+            let teamPlayers =[];
+            for (let i = 0; i < favTeamPlayers.length; i++) {
+                let playerName = favTeamPlayers[i].Name;
+                let playerPoints = favTeamPlayers[i].FantasyPoints;
+                teamPlayers.push({playerName, playerPoints});
+            }
+            // this is what is appended to the handlebars html
+            for (let i=0; i<5; i++){
+                $("#fantasyPlayers")
+                    .append($("<div>")
+                        .html("\n <h2>"+teamPlayers[i].playerName+"</h2>\n <p>Last week fantasy points: "+teamPlayers[i].playerPoints+"</p>\n")
+                    )
+            }
+        }
+    };
+    xhttp.open('GET', "https://api.sportsdata.io/v3/nfl/stats/json/DailyFantasyPoints/2020-OCT-11?key=f7876577a76b4ae49e69a47f4dcdcdff", true);
+    xhttp.send();
+}
 
 }); //closes ready fcn
 
