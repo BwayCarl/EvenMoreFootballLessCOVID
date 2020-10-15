@@ -2,7 +2,7 @@
     "development": {
       "username": "root",
       "**--COMMENT--**": "ENTER YOUR MySQL PASSWORD BELOW.",
-      "password": "",
+      "password": "password",
       "database": "emflcDB",
       "host": "127.0.0.1",
       "port": 3306,

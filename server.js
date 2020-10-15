@@ -36,10 +36,16 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
-
+// Require routes
+require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app);
 
 app.get("/", function (req, res) {
-  res.render("index", {});
+  res.render("login.handlebars", {});
+});
+
+app.get("/signup", function (req, res) {
+  res.render("signup.handlebars", {});
 });
 
 // app.get("/teams", function (req, res) {

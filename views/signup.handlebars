@@ -1,0 +1,75 @@
+<body class="page-wrapper">
+    <!-- background photo by Gravitylicious.com from Pexels -->
+
+    <!-- header text -->
+    <header class="blackbg mb-3">
+        <h1 class="text-uppercase">Even More Football Less COVID</h1>
+    </header>
+
+    <main class="container">
+
+        <!-- provides intro to the app -->
+        <div class="hero section-bg">
+            <div class="intro-text">
+                <h3 class="mb-4">Know the COVID risk before you buy your tickets!</h3>
+                <p class="mb-3 font-weight-bold">Get to the game in three easy steps:</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-user-friends fa-3x"></i>
+                            <p class="card-text mt-2">Select your team</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="far fa-list-alt fa-3x"></i>
+                            <p class="card-text mt-2">Choose your game</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-briefcase-medical fa-3x"></i>
+                            <p class="card-text mt-2">Evaluate your risk</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{!-- sign up form --}}
+        <div class="section-bg" style="padding: 1em">
+            <h2>Welcome - sign up here for immediate access!</h2>
+        <form class="signup">
+          <div class="form-group">
+            {{!-- <label for="exampleInputEmail1">Email address</label> --}}
+            <input type="email" class="form-control" id="email-input" placeholder="Email">
+          </div>
+          <div class="form-group">
+            {{!-- <label for="exampleInputPassword1">Password</label> --}}
+            <input type="password" class="form-control" id="password-input" placeholder="Password">
+          </div>
+          <div class="form-group">
+            {{!-- <label for="faveTeam">Favorite Team</label> --}}
+            <input type="text" class="form-control" id="faveTeam" placeholder="Favorite Team">
+          </div>
+          <button type="submit" class="btn btn-secondary">Sign Up</button>
+        </form>
+         <br />
+        <p>Already have an account? Login <a href="/login">here</a></p>
+        </div>
+       
+    </main>
+
+
+
+    <footer class="footer mt-5">
+        <p class="blackbg mb-0">Brought to you by: Adam, Carlos, Charles, Jake, and Manuel </p>
+    </footer>
+    <script type="text/javascript" src="js/signup.js"></script>
+</body>

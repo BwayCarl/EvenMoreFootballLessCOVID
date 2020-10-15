@@ -31,48 +31,48 @@ app.get('/teamNewsArticle', function(req, res){
     })
 })
 
- function teamNews(team) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status == 200) {
-            const obj = (JSON.parse(xhttp.responseText));
-            for (i = 0; i < obj.length; i++) {
-                const title = obj[i].Title;
-                const content = obj[i].Content;
-                document.getElementById('title').innerHTML = title;
-                document.getElementById('news').innerHTML = content;
-            }
+//  function teamNews(team) {
+//     var xhttp = new XMLHttpRequest();
+//     xhttp.onreadystatechange = function () {
+//         if (this.readyState === 4 && this.status == 200) {
+//             const obj = (JSON.parse(xhttp.responseText));
+//             for (i = 0; i < obj.length; i++) {
+//                 const title = obj[i].Title;
+//                 const content = obj[i].Content;
+//                 document.getElementById('title').innerHTML = title;
+//                 document.getElementById('news').innerHTML = content;
+//             }
 
-        }
-    };
-    xhttp.open('GET', 'https://api.sportsdata.io/v3/nfl/scores/json/NewsByTeam/' + team + '?key=f7876577a76b4ae49e69a47f4dcdcdff', true);
-    xhttp.send();
+//         }
+//     };
+//     xhttp.open('GET', 'https://api.sportsdata.io/v3/nfl/scores/json/NewsByTeam/' + team + '?key=f7876577a76b4ae49e69a47f4dcdcdff', true);
+//     xhttp.send();
 
-}
-function leagueNews() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status == 200) {
-            const obj = JSON.parse(xhttp.responseText);
-            console.log(obj)
-            for (i = 0; i < obj.length; i++) {
-                const title = obj[i].Title;
-                const content = obj[i].Content;
-                const source = obj[i].Source;
+// }
+// function leagueNews() {
+//     var xhttp = new XMLHttpRequest();
+//     xhttp.onreadystatechange = function () {
+//         if (this.readyState === 4 && this.status == 200) {
+//             const obj = JSON.parse(xhttp.responseText);
+//             console.log(obj)
+//             for (i = 0; i < obj.length; i++) {
+//                 const title = obj[i].Title;
+//                 const content = obj[i].Content;
+//                 const source = obj[i].Source;
 
                 
                 
-            }
-        }
-    };
-    xhttp.open('GET', 'https://api.sportsdata.io/v3/nfl/scores/json/News?key=f7876577a76b4ae49e69a47f4dcdcdff', true);
-    xhttp.send();
-    console.log(xhttp.responseText);
+//             }
+//         }
+//     };
+//     xhttp.open('GET', 'https://api.sportsdata.io/v3/nfl/scores/json/News?key=f7876577a76b4ae49e69a47f4dcdcdff', true);
+//     xhttp.send();
+//     console.log(xhttp.responseText);
 
-}
+// }
 
-teamNews('sf');
-leagueNews();
+// teamNews('sf');
+// leagueNews();
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
