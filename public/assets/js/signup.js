@@ -13,6 +13,7 @@ $(document).ready(function() {
       password: passwordInput.val().trim(),
       faveTeam: faveTeam.val().trim()
     };
+    console.log(userData);
 
     if (!userData.email || !userData.password) {
       return;

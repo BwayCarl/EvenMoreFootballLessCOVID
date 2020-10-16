@@ -9,12 +9,13 @@ var db = require("./models");
 var session = require("express-session");
 // Requiring passport as we've configured it
 var passport = require("./config/passport");
+var bodyParser = require('body-parser');
 
 // C:\Users\Manuel\EvenMoreFootballLessCOVID\config.js
 // Create an instance of the express app.
 var app = express();
 
-app.use(express.static(path.join(__dirname, "assets")));
+app.use(express.static(path.join(__dirname,"/public")));
 // Set the port of our application
 // process.env.PORT lets the port be set by Heroku
 var PORT = process.env.PORT || 8080;
@@ -26,6 +27,11 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+})); 
 
 // Set Handlebars as the default templating engine.
 app.engine(
@@ -44,9 +50,9 @@ app.get("/", function (req, res) {
   res.render("login.handlebars", {});
 });
 
-app.get("/signup", function (req, res) {
-  res.render("signup.handlebars", {});
-});
+// app.get("/signup", function (req, res) {
+//   res.render("signup.handlebars", {});
+// });
 
 // app.get("/teams", function (req, res) {
 //   res.render("index", ...[1]);
