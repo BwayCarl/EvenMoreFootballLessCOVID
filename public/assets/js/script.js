@@ -1,37 +1,31 @@
 $(document).ready(function () {
-
     $("button").on("click", function () {
         $("#teamGame").empty();
         $("#teamName").empty();
     });
-
     //event listener for the drop-down menu
     $(".dropdown-menu a").click(function (event) {
-        console.log("cliked!!")
-        console.log($(this).attr("id"))
         event.preventDefault();
         //grab the team name based on user selection
-        selectedTeam = $(this).attr("id");
-
-        var queryURL = "https://api.sportsdata.io/v3/nfl/scores/json/Schedules/2020?key=6306de6ffce1432bae3dc370a38a8de3"
-
+        const selectedTeam = $(this).attr("id");
+        var queryURL = "/schedules"
         // use football.io Schedules API to create an array of opponents of the selected team
         $.ajax({
             url: queryURL,
             method: "GET"
-        }).then(function (response) {
+        }).then(function (res) {
+            console.log(res)
+            console.log(selectedTeam)
             //just the games where the selected team is home
-            let homeTeamGames = response.filter(homeTeamGames => (homeTeamGames.HomeTeam === selectedTeam && homeTeamGames.AwayTeam != "BYE"));
-
+            let homeTeamGames = res.filter(homeTeamGames => (homeTeamGames.HomeTeam === selectedTeam && homeTeamGames.AwayTeam != "BYE"));
             //array of the opponents' abbreviations
             let awayTeams = []
             for (let i = 0; i < homeTeamGames.length; i++) {
                 awayTeams.push(homeTeamGames[i].AwayTeam);
             }
-
             //use football.io Teams API to obtain opponent info, state, and capacity 
             $.ajax({
-                url: "https://api.sportsdata.io/v3/nfl/scores/json/Teams?key=6306de6ffce1432bae3dc370a38a8de3",
+                url: "/teams",
                 method: "GET"
             }).then(function (response) {
                 //find the abbreviation for the selected team
@@ -43,13 +37,11 @@ $(document).ready(function () {
                 let stadium = obj.StadiumDetails.Name;
                 let city = obj.StadiumDetails.City
                 let teamState = obj.StadiumDetails.State;
-
                 //array of team info for the away teams
                 let awayTeamDetails = [];
                 awayTeams.map(function (currentAwayTeam) {
                     awayTeamDetails.push(response.find(obj => (obj.Key === currentAwayTeam)))
                 })
-
                 //create the heading
                 $("#teamName").html(homeTeamFullName + " Home Schedule");
                 $("#scheduleArea").removeClass("d-none");
@@ -105,7 +97,7 @@ $(document).ready(function () {
 
                 //obtain COVID case data from covidtracking API
                 $.ajax({
-                    url: "https://covidtracking.com/api/v1/states/current.json",
+                    url: "https://cors-anywhere.herokuapp.com/https://covidtracking.com/api/v1/states/current.json",
                     method: "GET"
                 }).then(function (response) {
                     //find the object with the selected state
