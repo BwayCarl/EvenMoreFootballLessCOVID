@@ -10,7 +10,6 @@ var session = require("express-session");
 // Requiring passport as we've configured it
 var passport = require("./config/passport");
 var bodyParser = require('body-parser');
-// var CircularJSON = require("circular-json")
 require('dotenv').config();
 
 // C:\Users\Manuel\EvenMoreFootballLessCOVID\config.js
@@ -64,7 +63,7 @@ app.get("/", function (req, res) {
 
 app.get("/schedules", function (req, res) {
   console.log('getting schedule************')
-  axios.get(`https://api.sportsdata.io/v3/nfl/scores/json/Schedules/2020?key=6306de6ffce1432bae3dc370a38a8de3`)
+  axios.get(`https://api.sportsdata.io/v3/nfl/scores/json/Schedules/2020?key=${config.apiKey1}`)
     .then(function (response) {
       // handle success
       res.json(response.data)
@@ -73,7 +72,7 @@ app.get("/schedules", function (req, res) {
 
 app.get("/teams", function (req, res) {
 console.log('getting teams')
-  axios.get(`https://api.sportsdata.io/v3/nfl/scores/json/Teams?key=6306de6ffce1432bae3dc370a38a8de3`)
+  axios.get(`https://api.sportsdata.io/v3/nfl/scores/json/Teams?key=${config.apiKey1}`)
     .then(function (response) {
       // handle success
       res.json(response.data)

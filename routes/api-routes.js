@@ -96,7 +96,8 @@ module.exports = function(app) {
       faveTeam: req.body.faveTeam
     })
       .then(function() {
-        res.redirect(307, "/login");
+        console.log("login")
+        res.redirect("/login");
       })
       .catch(function(err) {
         res.status(401).json(err);
